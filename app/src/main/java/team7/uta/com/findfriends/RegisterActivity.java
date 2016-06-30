@@ -5,7 +5,7 @@ import android.os.Bundle;
  * Created by Harshith on 6/28/2016.
  */
 
-public class register extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
