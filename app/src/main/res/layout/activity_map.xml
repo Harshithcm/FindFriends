@@ -1,19 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"></LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="107dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Welcome to Map Activity !! This is under construction !!"
-        android:id="@+id/textView"
-        android:layout_weight="0.68" />
-</LinearLayout>
+    tools:context="team7.uta.com.findfriends.MapActivity" />
