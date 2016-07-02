@@ -18,10 +18,10 @@ public class User implements Serializable {
     private String pwd;
     private String email;
     private Location currentLocation;
-    private ArrayList<String> hobbies;
+    private String hobbies;
 
     public User(String name, String pwd, String email,
-                Location userLoc, ArrayList<String> hobbies) {
+                Location userLoc, String hobbies) {
         this.setName(name);
         this.setPwd(pwd);
         this.setEmail(email);
@@ -61,11 +61,11 @@ public class User implements Serializable {
         this.currentLocation = currentLocation;
     }
 
-    public ArrayList<String> getHobbies() {
+    public String getHobbies() {
         return hobbies;
     }
 
-    public void setHobbies(ArrayList<String> hobbies) {
+    public void setHobbies(String hobbies) {
         this.hobbies = hobbies;
     }
 }

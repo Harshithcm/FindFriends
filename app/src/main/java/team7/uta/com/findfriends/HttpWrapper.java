@@ -5,6 +5,7 @@ package team7.uta.com.findfriends;
  */
 
 
+        import android.content.Intent;
         import android.os.AsyncTask;
         import android.util.Log;
         import android.widget.Toast;
@@ -73,9 +74,9 @@ public class HttpWrapper extends AsyncTask<HttpPost, Void, InputStream> {
                 status = "Success";
                 try {
                     JSONObject jObj = new JSONObject(result1);
-                    //this.registerActivity.setUser_id(jObj.getString("user_id"));
-                    //this.registerActivity.registerResult(status);
-                } catch (JSONException e) {
+                    this.registerActivity.registerResult(status);
+
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             } else {
