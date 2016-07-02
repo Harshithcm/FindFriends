@@ -84,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
         go.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                if(editTextName == null || editTextPass == null) {
+                /*if(editTextName == null || editTextPass == null) {
                     Toast.makeText(getApplicationContext(), "Please enter UserName and password", Toast.LENGTH_LONG).show();
                     return;
-                }
+                }*/
 
                 // declare parameters that are passed to PHP script
                 ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
