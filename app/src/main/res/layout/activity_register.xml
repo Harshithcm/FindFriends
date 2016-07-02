@@ -17,16 +17,14 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/password1"
-        android:text="Password" />
+        android:id="@+id/editTextpassword" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/password2"
-        android:text="Confirm Password" />
+        android:id="@+id/editTextconpwd" />
 
     <EditText
         android:layout_width="match_parent"
@@ -88,9 +86,9 @@
             android:layout_height="wrap_content"
             android:text="Tennis"
             android:id="@+id/checkBox4"
+            android:checked="false"
             android:layout_below="@+id/checkBox2"
-            android:layout_alignEnd="@+id/checkBox2"
-            android:checked="false" />
+            android:layout_alignStart="@+id/checkBox2" />
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -107,9 +105,9 @@
             android:layout_height="wrap_content"
             android:text="Cricket"
             android:id="@+id/checkBox6"
+            android:checked="false"
             android:layout_below="@+id/checkBox4"
-            android:layout_alignEnd="@+id/checkBox4"
-            android:checked="false" />
+            android:layout_alignStart="@+id/checkBox4" />
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -126,9 +124,9 @@
             android:layout_height="wrap_content"
             android:text="Guitar"
             android:id="@+id/checkBox8"
+            android:checked="false"
             android:layout_below="@+id/checkBox6"
-            android:layout_alignEnd="@+id/checkBox2"
-            android:checked="false" />
+            android:layout_alignStart="@+id/checkBox6" />
 
         <Button
             android:layout_width="wrap_content"
