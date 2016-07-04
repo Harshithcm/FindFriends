@@ -16,6 +16,7 @@ android:orientation="vertical">
         tools:context="team7.uta.com.findfriends.MapActivity"
         tools:layout="@layout/activity_map" />
 
+
 <Button
     android:id="@+id/add_geofences_button"
     android:layout_width="wrap_content"
