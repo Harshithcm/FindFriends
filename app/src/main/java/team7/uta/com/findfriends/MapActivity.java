@@ -106,7 +106,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
             locationManager.requestLocationUpdates(locationProvider, 500, 20, this);
 
         }catch (SecurityException e){
-
+            //fill
         }
 
 
