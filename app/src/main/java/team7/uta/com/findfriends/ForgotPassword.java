@@ -21,13 +21,31 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
-public class ForgotPassword extends AppCompatActivity {
 
+public class ForgotPassword extends AppCompatActivity {
+    private User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
+    }
+    public void forgotPasswordResult(String result) {
+        //Log.e("Main actiity", "Error in loginResult " );
+        //Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_SHORT).show();
+        if(result.contains("Success")) {
+            try {
+                JSONObject jObject  = new JSONObject(result);
+                String email = jObject.getString("email");
+                user = new User(null,null,email,null,null);
+                Intent loginActivity = new Intent(ForgotPassword.this, MainActivity.class);
+                startActivity(loginActivity);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else {
+            Toast.makeText(getApplicationContext(),"Enter Correct E-mail id",Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void doLogin(View view) {

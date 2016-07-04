@@ -36,8 +36,7 @@ public class HttpWrapper extends AsyncTask<HttpPost, Void, InputStream> {
     private InputStream inputStream = null;
     private MainActivity loginActivity;
     private RegisterActivity registerActivity;
-   // private AddInterestActivity addInterestActivity;
-    //private UserProfile userProfileActivity;
+    private ForgotPassword forgotPasswordActivity;
     private MapActivity mapActivity;
     private String TAG = "http_wrapper";
 
@@ -93,6 +92,16 @@ public class HttpWrapper extends AsyncTask<HttpPost, Void, InputStream> {
                 this.loginActivity.loginResult(result1);
             }
         }
+        else if(result1.contains("ForgotPwd")){
+            if(result1.contains("Success")) {
+                status = "Success";
+                this.forgotPasswordActivity.forgotPasswordResult(result1);
+        }
+            else{
+                status = "Fail";
+                this.forgotPasswordActivity.forgotPasswordResult(result1);
+            }
+            }
     }
 
     public String responseToString(InputStream ins)
@@ -151,22 +160,6 @@ public class HttpWrapper extends AsyncTask<HttpPost, Void, InputStream> {
         this.registerActivity = registerActivity;
     }
 
-   /* public AddInterestActivity getAddInterestActivity() {
-        return addInterestActivity;
-    }
-
-    public void setAddInterestActivity(AddInterestActivity addInterestActivity) {
-        this.addInterestActivity = addInterestActivity;
-    }
-*/
-    /*public UserProfile getUserProfileActivity() {
-        return userProfileActivity;
-    }
-
-    public void setUserProfileActivity(UserProfile userProfileActivity) {
-        this.userProfileActivity = userProfileActivity;
-    }*/
-
     public MapActivity getMapActivity() {
         return mapActivity;
     }
@@ -174,6 +167,14 @@ public class HttpWrapper extends AsyncTask<HttpPost, Void, InputStream> {
     public void setMapActivity(MapActivity mapActivity) {
         this.mapActivity = mapActivity;
     }
+
+    public ForgotPassword getForgotPassword() {
+        return forgotPasswordActivity;
+    }
+    public void setForgotPassword(ForgotPassword forgotPasswordActivity) {
+        this.forgotPasswordActivity = forgotPasswordActivity;
+    }
+
 
   /*  public NotificationActivity getNotificationActivity() {
         return notificationActivity;

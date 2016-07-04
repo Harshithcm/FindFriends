@@ -39,7 +39,14 @@
             android:id="@+id/login" />
 
         <Button
-            android:layout_width="191dp"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:onClick="doForgotPassword"
+            android:id="@+id/buttonfrgtpwd" />
+
+        <Button
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:text="@string/register"
             android:id="@+id/register" />

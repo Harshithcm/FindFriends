@@ -11,9 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.StrictMode;
-
 import org.apache.http.client.methods.HttpPost;
-
 import java.sql.ResultSet;
 import android.util.Log;
 import org.apache.http.NameValuePair;
@@ -77,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent register_intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(register_intent);
-
             }
         });
 
@@ -144,5 +141,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Login failed",Toast.LENGTH_SHORT).show();
         }
     }
-
+   public void doForgotPassword(View view){
+        Intent intentf = new Intent(MainActivity.this,ForgotPassword.class);
+        startActivity(intentf);
+    }
 }
