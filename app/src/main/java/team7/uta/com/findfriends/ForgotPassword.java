@@ -31,13 +31,13 @@ public class ForgotPassword extends AppCompatActivity {
 
     }
     public void forgotPasswordResult(String result) {
-        //Log.e("Main actiity", "Error in loginResult " );
-        //Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_SHORT).show();
+
         if(result.contains("Success")) {
             try {
                 JSONObject jObject  = new JSONObject(result);
                 String email = jObject.getString("email");
                 user = new User(null,null,email,null,null);
+                Toast.makeText(getApplicationContext(),"An email has been sent to this e-mail id",Toast.LENGTH_SHORT).show();
                 Intent loginActivity = new Intent(ForgotPassword.this, MainActivity.class);
                 startActivity(loginActivity);
             } catch (JSONException e) {
